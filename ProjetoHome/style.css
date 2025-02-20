@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url(../img/backgroundimage2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form {
+    margin: 20px 0;
+}
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+#recipes {
+    margin-top: 20px;
+}
+
+.heading>h1 {
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.heading>h3 {
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+.heading {
+    background-color: #ffe539;
+    height: 65px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}

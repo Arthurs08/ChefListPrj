@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>ChefList</h1>
+        <h3>&mdash; Recipes &mdash;</h3>
+    </div>
+    <div class="imagemFundo">
+    <h1>Choose your ingredients</h1>
+
+    <form id="recipe-form">
+        <div class="checkbox-column">
+        <label><input type="checkbox" value="tomato"> Tomato</label>
+        <label><input type="checkbox" value="cheese"> Cheese</label>
+        <label><input type="checkbox" value="chicken"> Chicken</label>
+        <label><input type="checkbox" value="garlic"> Garlic</label>
+        <label><input type="checkbox" value="onion"> Onion</label>
+        <label><input type="checkbox" value="beef"> Beef</label>
+        <label><input type="checkbox" value="bacon"> Bacon</label>
+        <label><input type="checkbox" value="carrot"> Carrot</label>
+        <label><input type="checkbox" value="egg"> Egg</label>
+        <label><input type="checkbox" value="lettuce"> Lettuce</label>
+        </div>
+        <div class="checkbox-column">
+            
+            <label><input type="checkbox" value="potato"> Potato</label>
+            <label><input type="checkbox" value="spinach"> Spinach</label>
+            <label><input type="checkbox" value="mushrooms"> Mushrooms</label>
+            <label><input type="checkbox" value="milk"> Milk</label>
+            <label><input type="checkbox" value="flour"> Fluor</label>
+            <label><input type="checkbox" value="butter"> Butter</label>
+            <label><input type="checkbox" value="olive oil"> Olive oil</label>
+            <label><input type="checkbox" value="sugar"> sugar</label>
+            <label><input type="checkbox" value="salt"> Salt</label>
+            <label><input type="checkbox" value="pepper"> Pepper</label>
+        </div>
+        </div>
+        <button type="submit" id="search-button">Search Recipes</button>
+    </form>
+    <button id="LogoutBt" onclick="logout()">Logout</button>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
