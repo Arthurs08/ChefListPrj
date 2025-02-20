@@ -48,3 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
 function viewRecipe(recipeId) {
     window.location.href = `../ProjetoDetalhes/index.html?id=${recipeId}`;
 }
+    // VERIFICAR SE O USUÁRIO ESTÁ LOGADO
+    window.onload = function () {
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedIn"));
+        if (!loggedInUser) {
+            alert("Você precisa estar logado para acessar esta página!");
+            window.location.href = "../LoginCadastro/login.html"; 
+        }
+    };
+    // FUNÇÃO PARA FAZER LOGOUT
+    function logout() {
+        localStorage.removeItem("loggedIn");
+        alert("Você saiu da sua conta.");
+        window.location.href = "../LoginCadastro/login.html";
+    }
+    if (logoutButton) {
+        logoutButton.addEventListener("click", logout);
+    }

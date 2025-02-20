@@ -1,7 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 50px;
+    margin: 0;
+    height: 100vh; /* 100% da altura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
     background-color: #f4f4f4;
 }
 
@@ -16,7 +20,7 @@ body {
 }
 
 input {
-    width: 100%;
+    width: 90%;
     margin: 5px 0;
     padding: 8px;
     border: 1px solid #ccc;
@@ -24,21 +28,21 @@ input {
 }
 
 button {
-    width: 100%;
+    width: 98%;
     padding: 8px;
     margin-top: 10px;
     cursor: pointer;
-    background-color: #28a745;
+    background-color: #ff7b00;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #c7650a;
 }
 
 a {
     text-decoration: none;
-    color: #007bff;
+    color: #0084ff;
 }
