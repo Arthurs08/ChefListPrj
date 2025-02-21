@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (selectedIngredients) {
         const API_KEY = "8ee457926cd8410bbe7b591f91771f6f";
-        const API_URL = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${selectedIngredients}&number=21&ranking=1&apiKey=${API_KEY}`;
+        const API_URL = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${selectedIngredients}&number=18&ranking=1&apiKey=${API_KEY}`;
 
         fetch(API_URL)
             .then(response => response.json())
