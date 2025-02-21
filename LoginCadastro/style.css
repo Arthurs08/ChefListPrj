@@ -2,10 +2,10 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
-    height: 100vh; /* 100% da altura da tela */
+    height: 100vh; 
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; 
+    align-items: center;
     background-color: #f4f4f4;
 }
 

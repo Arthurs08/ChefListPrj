@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         const foodItemDiv = document.createElement("div");
                         foodItemDiv.classList.add("food-items");
 
-                        // Acessar os ingredientes usados ou faltando
                         const usedIngredients = recipe.usedIngredients ? recipe.usedIngredients.map(ingredient => ingredient.name).join(", ") : "Ingredients not available";
 
                         foodItemDiv.innerHTML = `

@@ -24,21 +24,20 @@ document.addEventListener("DOMContentLoaded", async function () {
             <div class="instructions" id="instructions"></div>
         `;
 
-        // Preenche a lista de ingredientes em formato de "passos"
         const ingredientsList = document.getElementById("ingredients-list");
         recipe.extendedIngredients.forEach((ingredient) => {
             const li = document.createElement("li");
-            li.textContent = `${ingredient.original}`;
+            li.textContent = ingredient.original; // Apenas o texto do ingrediente
             ingredientsList.appendChild(li);
         });
 
-        // Preenche as instruções
         const instructionsContainer = document.getElementById("instructions");
         if (recipe.instructions) {
-            const steps = recipe.instructions.split("\n").map(step => step.trim()).filter(Boolean);
+            // Remover tags HTML e separar as instruções corretamente
+            const steps = recipe.instructions.replace(/<[^>]+>/g, "").split("\n").map(step => step.trim()).filter(Boolean);
             steps.forEach(step => {
                 const p = document.createElement("p");
-                p.textContent = step;
+                p.textContent = step; // Apenas o texto da instrução, sem tags HTML
                 instructionsContainer.appendChild(p);
             });
         } else {
@@ -49,20 +48,25 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.getElementById("recipe-details").innerHTML = "<p>Error loading recipe details.</p>";
     }
 });
-    // VERIFICAR SE O USUÁRIO ESTÁ LOGADO
-    window.onload = function () {
-        const loggedInUser = JSON.parse(localStorage.getItem("loggedIn"));
-        if (!loggedInUser) {
-            alert("Você precisa estar logado para acessar esta página!");
-            window.location.href = "../LoginCadastro/login.html"; 
-        }
-    };
-    // FUNÇÃO PARA FAZER LOGOUT
-    function logout() {
-        localStorage.removeItem("loggedIn");
-        alert("Você saiu da sua conta.");
-        window.location.href = "../LoginCadastro/login.html";
+
+// VERIFICAR SE O USUÁRIO ESTÁ LOGADO
+window.onload = function () {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedIn"));
+    if (!loggedInUser) {
+        alert("Você precisa estar logado para acessar esta página!");
+        window.location.href = "../LoginCadastro/login.html"; 
     }
-    if (logoutButton) {
-        logoutButton.addEventListener("click", logout);
-    }
+};
+
+// FUNÇÃO PARA FAZER LOGOUT
+function logout() {
+    localStorage.removeItem("loggedIn");
+    alert("Você saiu da sua conta.");
+    window.location.href = "../LoginCadastro/login.html";
+}
+
+// Adiciona o evento de logout, caso o botão exista
+const logoutButton = document.getElementById("LogoutBt");
+if (logoutButton) {
+    logoutButton.addEventListener("click", logout);
+}
